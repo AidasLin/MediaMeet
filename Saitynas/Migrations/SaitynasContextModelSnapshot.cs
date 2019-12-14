@@ -149,6 +149,18 @@ namespace Saitynas.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
+
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("varchar(20)")
@@ -165,6 +177,11 @@ namespace Saitynas.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(20)")
                         .HasMaxLength(20)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Token")
+                        .HasColumnType("varchar(255)")
+                        .HasMaxLength(255)
                         .IsUnicode(false);
 
                     b.Property<int>("UserRole")

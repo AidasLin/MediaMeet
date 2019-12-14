@@ -72,9 +72,12 @@ namespace Saitynas.Migrations
                     UserID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(unicode: false, maxLength: 20, nullable: false),
+                    Username = table.Column<string>(unicode: false, maxLength: 20, nullable: false),
+                    Password = table.Column<string>(unicode: false, maxLength: 20, nullable: false),
                     City = table.Column<string>(unicode: false, maxLength: 20, nullable: false),
                     UserRole = table.Column<int>(nullable: false),
-                    Gender = table.Column<string>(unicode: false, maxLength: 6, nullable: false)
+                    Gender = table.Column<string>(unicode: false, maxLength: 6, nullable: false),
+                    Token = table.Column<string>(unicode: false, maxLength: 255, nullable: true),
                 },
                 constraints: table =>
                 {

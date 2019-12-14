@@ -121,6 +121,16 @@ namespace Saitynas.Models
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
 
+                entity.Property(e => e.Username)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Password)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.City)
                     .IsRequired()
                     .HasMaxLength(20)
@@ -135,6 +145,8 @@ namespace Saitynas.Models
                     .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false);
+
+                entity.Property(e => e.Token).HasColumnName("Token");
             });
 
             OnModelCreatingPartial(modelBuilder);
