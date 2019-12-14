@@ -26,21 +26,34 @@ export class NavMenu extends Component {
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
           <Container>
-            <NavbarBrand tag={Link} to="/">Saitynas</NavbarBrand>
+            <NavbarBrand tag={Link} to="/">MediaMeet</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
-                </NavItem>
+                            <NavItem>
+                              <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                            </NavItem>
+                            <NavItem>
+                              <NavLink tag={Link} className="text-dark" to="/counter">Creators</NavLink>
+                            </NavItem>
+                            <NavItem>
+                              <NavLink tag={Link} className="text-dark" to="/fetch-data">Artworks</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/counter">Ratings</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/counter">Users</NavLink>
+                            </NavItem>
               </ul>
-            </Collapse>
+                    </Collapse>
+                    <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+                        <ul className="navbar-nav flex-grow">
+                            <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/login">Login</NavLink>
+                            </NavItem>
+                        </ul>
+                    </Collapse>
           </Container>
         </Navbar>
       </header>
